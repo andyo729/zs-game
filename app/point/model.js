@@ -2,6 +2,6 @@ import Model from 'ember-data/model';
 import DS from 'ember-data';
 
 export default Model.extend({
-  name: DS.attr('string'),
-  points: DS.hasMany('points')
+  pointType: DS.belongsTo('pointType'),
+  user: DS.belongsTo('user')
 });
