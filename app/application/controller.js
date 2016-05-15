@@ -4,7 +4,7 @@ export default Ember.Controller.extend({
   actions: {
     addPoint(user, pointType) {
       const point = this.store.createRecord('point', {
-        user, pointType
+        user, pointType, createdOn: new Date()
       });
       point.save();
     }

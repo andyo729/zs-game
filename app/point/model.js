@@ -3,5 +3,6 @@ import DS from 'ember-data';
 
 export default Model.extend({
   pointType: DS.belongsTo('pointType'),
-  user: DS.belongsTo('user')
+  user: DS.belongsTo('user'),
+  createdOn: DS.attr('date')
 });
