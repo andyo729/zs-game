@@ -1,11 +1,12 @@
 /* jshint node: true */
+require('dotenv').config({ silent: true });
 
 module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'the-game',
     environment: environment,
     contentSecurityPolicy: { 'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com" },
-    firebase: 'https://YOUR-FIREBASE-NAME.firebaseio.com/',
+    firebase: process.env.FIREBASE_URL,
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
