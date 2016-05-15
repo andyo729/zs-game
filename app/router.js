@@ -9,6 +9,10 @@ Router.map(function() {
   this.route('user', function() {
     this.route('new');
   });
+
+  this.route('point-type', function() {
+    this.route('new');
+  });
 });
 
 export default Router;
