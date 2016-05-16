@@ -6,7 +6,13 @@ export default Ember.Controller.extend({
       const point = this.store.createRecord('point', {
         user, pointType, createdOn: new Date()
       });
-      point.save();
+
+      user.get('points').pushObject(point);
+      pointType.get('points').pushObject(point);
+
+      point.save()
+        .then(() => user.save())
+        .then(() => pointType.save());
     }
   }
 });

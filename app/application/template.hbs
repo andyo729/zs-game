@@ -3,7 +3,7 @@
     <li>
       {{user.name}}
       {{#each model.pointTypes as |pointType|}}
-        <button {{action "addPoint" user pointType}}>{{pointType.name}}</button>
+        {{point-button user=user pointType=pointType addPoint="addPoint"}}
       {{/each}}
     </li>
   {{/each}}
