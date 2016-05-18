@@ -1,0 +1,6 @@
+form submit="saveUser"
+  = input value=model.name
+  br
+  button
+    | Save
+= outlet

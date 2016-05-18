@@ -1,0 +1,6 @@
+form submit="savePointType"
+  = input value=model.name
+  br
+  button
+    | Save
+= outlet

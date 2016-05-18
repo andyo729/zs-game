@@ -1,0 +1,5 @@
+each model.users as |user|
+  = user.name
+  each model.pointTypes as |pointType|
+    point-button user=user pointType=pointType addPoint="addPoint"
+= outlet
