@@ -4,5 +4,4 @@
       each model.users as |user|
         link-to 'user.show' user.id class="btn btn-default"
           = user.name
-  .panel-body
-    = outlet
+  = outlet
