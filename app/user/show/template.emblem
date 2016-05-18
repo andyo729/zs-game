@@ -2,5 +2,7 @@ p
   | Add:&nbsp;
   .btn-group
     each model.pointTypes as |pointType|
-      point-button pointType=pointType
+      point-button pointType=pointType user=model.user addPoint="addPoint"
+p
+  | Total points: #{model.user.points.length}
 = outlet

@@ -3,6 +3,7 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   classNames: ['btn-default', 'btn'],
   pointType: null,
+  user: null,
   tagName: 'button',
   click() {
     const { user, pointType } = this.getProperties('user', 'pointType');
