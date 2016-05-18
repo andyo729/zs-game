@@ -4,6 +4,13 @@
     .btn-group
       each model.pointTypes as |pointType|
         point-button pointType=pointType user=model.user addPoint="addPoint"
+
+  h2
+    | Stats
   p
-    | Total points: #{model.user.points.length}
+    ul
+      li
+        | Points this week: #{pointsThisWeek.length}
+      li
+        | Total points: #{model.user.points.length}
   = outlet
