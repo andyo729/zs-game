@@ -1,5 +1,8 @@
-each model.users as |user|
-  = user.name
-  each model.pointTypes as |pointType|
-    point-button user=user pointType=pointType addPoint="addPoint"
-= outlet
+.panel.panel-default
+  .panel-heading
+    .btn-group.btn-group-lg
+      each model.users as |user|
+        link-to 'user.show' user.id class="btn btn-default"
+          = user.name
+  .panel-body
+    = outlet

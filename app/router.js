@@ -6,8 +6,9 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('user', function() {
+  this.route('user', { path: '/user/' }, function() {
     this.route('new');
+    this.route('show', { path: '/:id' });
   });
 
   this.route('point-type', function() {
